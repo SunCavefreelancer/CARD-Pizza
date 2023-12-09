@@ -1,0 +1,314 @@
+/*=======Підключення шрифтів=======*/
+@import url("fonts.css");
+
+/*=======Скидання стилів=======*/
+@import url("reset.css");
+
+
+
+
+body {
+	font-family: 'Inter', sans-serif;
+	color: #6d6d6d;
+}
+
+.wrapper {
+	overflow: clip;
+	min-height: 100%;
+
+	display: flex;
+	/* прижимаем футер книзу */
+	flex-direction: column;
+	/* прижимаем футер книзу */
+
+}
+
+.wrapper>main {
+	flex-grow: 1;
+	/* прижимаем футер книзу */
+}
+
+/* для усіх "__container" однаково */
+[class*="__container"] {
+	max-width: 870px;
+	/* 840 + 15 + 15 */
+	margin: 0 auto;
+	padding: 0px 15px;
+
+	border: 1px solid red;
+}
+
+
+/*--card--*/
+/* =============================flip=============================== */
+.flip__front {
+	content: "";
+	background-image: url(../img/04.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+}
+
+.flip {
+	margin: 0 auto;
+	padding: 150px;
+	max-width: 550px;
+
+	border: 1px solid rgb(0, 255, 94);
+}
+
+.flip h2 {
+	margin-bottom: 20px;
+	font-family: 'Causten-Semi-Bold';
+	font-weight: 600;
+	font-size: 30px;
+	text-align: center;
+	letter-spacing: 1.5px;
+
+}
+.flip__body {	
+	position: relative;
+	width: 300px;
+	height: 500px;
+
+	perspective: 500px;
+}
+
+
+
+.flip__front p {
+	margin-bottom: 20px;
+	font-family: 'CoreSansC';
+	font-weight: 600;
+	font-size: 30px;
+	text-align: center;
+	letter-spacing: 1.5px;
+	color: black;
+	padding: 20px;
+}
+
+/* logo */
+.flip__front-logo {
+	width: 250px;
+	height: 350px;
+
+	filter: drop-shadow(10px -30px 40px #89d879);
+
+	position: absolute;
+	top: -40px;
+	left: 25px;
+	transform: rotateZ(-5deg);
+}
+.flip__front-logo img{
+	max-width: 100%;
+	border: 1px solid rgb(0, 255, 94);
+}
+/* logo */
+
+
+
+/* img */
+.flip__front-image {
+	width: 150px;
+	height: 350px;
+
+	position: absolute;
+	top: 80px;
+	right: 0px;
+
+}
+.flip__front-image img {
+	max-width: 100%;
+	border: 1px solid rgb(0, 255, 94);
+}
+/* img */
+
+
+/* img 2 */
+.flip__front-image--2 {
+	position: absolute;
+	left: -10px;
+	top: 280px;
+	z-index: 2;
+}
+.flip__front-image--2 img{
+	width: 120px;
+	height: 120px;
+	transform: rotateZ(-50deg);
+}
+/* img 2 */
+
+
+
+/* img 3 */
+.flip__front-image--3 {
+	position: absolute;
+	left: 60px;
+	top: 230px;
+
+	filter: drop-shadow(10px 30px 40px #3e3f3e);
+
+}
+.flip__front-image--3 img{
+	width: 90px;
+	height: 90px;
+	transform: rotateZ(-150deg);
+}
+/* img 3 */
+
+
+/* img 4 помидор целый*/
+.flip__front-image--4 {
+	position: absolute;
+	top: 335px;
+	right: 100px;
+
+	filter: drop-shadow(0px 20px 20px #f5f0eb);
+
+	z-index: 1;
+}
+.flip__front-image--4 img{
+	max-width: 100%;
+}
+/* img 4 */
+
+
+
+/* img 5 колбаса*/
+.flip__front-image--5 {
+	position: absolute;
+	top: 35px;
+	left: 280px;
+	transform: rotateZ(-90deg);
+}
+
+.flip__front-image--5 img {
+	max-width: 100%;
+}
+/* img 5 */
+
+
+/* img 6 долька помидора на пице*/
+.flip__front-image--6 {
+	position: absolute;
+	top: 255px;
+	left: 195px;
+	transform: rotateZ(-40deg);
+
+	width: 90px;
+	height: 90px;
+}
+
+.flip__front-image--6 img{
+	max-width: 100%;
+}
+/* img 6 */
+
+
+/* img 7 */
+.flip__front-image--7 {
+	position: absolute;
+	top: 105px;
+	left: 235px;
+	transform: rotateZ(-40deg);
+
+	width: 70px;
+	height: 70px;
+}
+.flip__front-image--7 {
+	max-width: 100%;
+}
+/* img 7 */
+
+
+
+/* img 8  укроп*/
+.flip__front-image--8 {
+	position: absolute;
+	top: 305px;
+	left: 35px;
+	transform: rotateZ(10deg);
+	transform: scale(1.5);
+	z-index: 1;
+
+}
+.flip__front-image--8 img{
+	max-width: 100%;
+}
+/* img 8 */
+
+
+/* img 9  перец*/
+.flip__front-image--9 {
+	position: absolute;
+	top: 100px;
+	left: 20px;
+	transform: rotateY(180deg);
+}
+.flip__front-image--9 img{
+	max-width: 100%;
+}
+/* img 9 */
+
+
+.flip__front-price p{
+	color: #fff;
+	font-family: 'CoreSansC';
+	font-weight: 600;
+	font-size: 30px;
+	text-align: center;
+	letter-spacing: 1.5px;
+	text-decoration: underline;
+	cursor: pointer;
+	line-height: 150%;
+
+	transition: 0.5s;
+
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+
+
+
+
+.flip__front,
+.flip__back {
+	position: absolute; 
+	width: 100%; 
+	height: 100%; 
+	top: 0; 
+	left: 0; 
+	transition: 0.8s;
+
+	filter: drop-shadow(10px 10px 40px #424141);
+	border-radius: 20px;
+}
+
+
+
+/* 	<!--лицо карточки--> */
+.flip__front {
+	background-color: green;
+	transform: rotateY(0deg);
+
+	backface-visibility: hidden; /* сховали front інакше буде "ізнанка" сторінки*/
+}
+
+
+/* 	<!-- изнанка карточки--> */
+.flip__back {
+	background-color: crimson;
+	transform: rotateY(-180deg);
+}
+
+.flip__body:hover .flip__back {
+	transform: rotateY(0deg);
+}
+
+.flip__body:hover .flip__front{  /* показали front */
+	transform: rotateY(180deg);
+}
